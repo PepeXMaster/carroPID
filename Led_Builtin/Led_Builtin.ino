@@ -1,6 +1,7 @@
 void setup()
 {
 	pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
 }
 
 void loop()
@@ -8,5 +9,6 @@ void loop()
 	digitalWrite(LED_BUILTIN,HIGH);
     delay(5000);
     digitalWrite(LED_BUILTIN,LOW);
-    delay(5000);
+    delay(500);
+    Serial.println("Chava me la pela");
 }
