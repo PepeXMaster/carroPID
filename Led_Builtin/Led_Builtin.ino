@@ -6,9 +6,9 @@ void setup()
 
 void loop()
 {
-	digitalWrite(LED_BUILTIN,HIGH);
+	digitalWrite(LED_BUILTIN,LOW);
     delay(5000);
-    digitalWrite(LED_BUILTIN,LOW);
+    digitalWrite(LED_BUILTIN,HIGH);
     delay(500);
     Serial.println("Chava me la pela"); //Probando el Serial Monitor
 }
