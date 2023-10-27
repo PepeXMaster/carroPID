@@ -1,4 +1,5 @@
 #include <Arduino.h>
+<<<<<<< HEAD
 #line 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 /*
   Blink
@@ -30,6 +31,14 @@ void setup();
 #line 32 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 void loop();
 #line 26 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+=======
+#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+void setup();
+#line 7 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+void loop();
+#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+>>>>>>> c483c0ea4668267729cbc27744582672385f0e9f
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
@@ -37,9 +46,9 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(LED_BUILTIN, LOW);  // turn the LED on (HIGH is the voltage level)
   delay(1000);                      // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED off by making the voltage LOW
   delay(1000);                      // wait for a second
 }
 delay(1000)

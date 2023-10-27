@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 /*
 
@@ -46,6 +47,9 @@
 */
 # 25 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 // the setup function runs once when you press reset or power the board
+=======
+# 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+>>>>>>> c483c0ea4668267729cbc27744582672385f0e9f
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(13, 0x1);
@@ -53,9 +57,9 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(13, 0x1); // turn the LED on (HIGH is the voltage level)
+  digitalWrite(13, 0x0); // turn the LED on (HIGH is the voltage level)
   delay(1000); // wait for a second
-  digitalWrite(13, 0x0); // turn the LED off by making the voltage LOW
+  digitalWrite(13, 0x1); // turn the LED off by making the voltage LOW
   delay(1000); // wait for a second
 }
 delay(1000)
