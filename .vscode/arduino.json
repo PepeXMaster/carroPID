@@ -1,7 +1,0 @@
-{
-    "sketch": "masterCode\\masterCode.ino",
-    "output": "build",
-    "configuration": "cpu=atmega328old",
-    "board": "arduino:avr:nano",
-    "port": "COM3"
-}
