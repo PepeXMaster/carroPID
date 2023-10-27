@@ -5,5 +5,5 @@ void setup(){
 }
 
 void loop(){
-    chava me la pelas bien y bonito
+    
 }
