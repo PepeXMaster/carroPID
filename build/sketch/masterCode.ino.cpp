@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+#line 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 /*
   Blink
 
@@ -25,11 +25,11 @@
 */
 
 // the setup function runs once when you press reset or power the board
-#line 26 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+#line 26 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 void setup();
-#line 32 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+#line 32 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 void loop();
-#line 26 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+#line 26 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
@@ -42,3 +42,6 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
   delay(1000);                      // wait for a second
 }
+delay(1000)
+  
+

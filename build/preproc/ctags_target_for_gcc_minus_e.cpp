@@ -1,4 +1,4 @@
-# 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+# 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 /*
 
   Blink
@@ -44,7 +44,7 @@
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 
 */
-# 25 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
+# 25 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\masterCode\\masterCode.ino"
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
@@ -58,3 +58,4 @@ void loop() {
   digitalWrite(13, 0x0); // turn the LED off by making the voltage LOW
   delay(1000); // wait for a second
 }
+delay(1000)
