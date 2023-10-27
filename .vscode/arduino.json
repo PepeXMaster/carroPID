@@ -1,0 +1,7 @@
+{
+    "sketch": "Led_Builtin\\Led_Builtin.ino",
+    "output": "build",
+    "port": "COM4",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega"
+}
