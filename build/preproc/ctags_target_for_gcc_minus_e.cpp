@@ -7,9 +7,9 @@ void setup()
 
 void loop()
 {
- digitalWrite(13,0x1);
+ digitalWrite(13,0x0);
     delay(5000);
-    digitalWrite(13,0x0);
+    digitalWrite(13,0x1);
     delay(500);
-    Serial.println("Chava me la pela");
+    Serial.println("Alan me la pela"); //Probando el Serial Monitor
 }
