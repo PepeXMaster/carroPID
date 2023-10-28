@@ -17,6 +17,6 @@ void loop()
     delay(5000);
     digitalWrite(LED_BUILTIN,HIGH);
     delay(500);
-    Serial.println("Alan me la pela"); //Probando el Serial Monitor
+    Serial.println("Diego me la pela"); //Probando el Serial Monitor
 }
 
