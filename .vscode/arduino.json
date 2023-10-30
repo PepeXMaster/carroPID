@@ -1,5 +1,5 @@
 {
-    "sketch": "Led_Builtin\\control_motor.ino",
+    "sketch": "Funciones\\control_motor\\control_motor.ino",
     "output": "build",
     "port": "COM4",
     "configuration": "cpu=atmega2560",

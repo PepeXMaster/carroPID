@@ -1,5 +1,5 @@
-C:\Users\pepe3\OneDrive\ -\ Instituto\ Tecnologico\ y\ de\ Estudios\ Superiores\ de\ Monterrey\Documents\carroPID\build\sketch\Led_Builtin.ino.cpp.o: \
- C:\Users\pepe3\OneDrive\ -\ Instituto\ Tecnologico\ y\ de\ Estudios\ Superiores\ de\ Monterrey\Documents\carroPID\build\sketch\Led_Builtin.ino.cpp \
+C:\Users\pepe3\OneDrive\ -\ Instituto\ Tecnologico\ y\ de\ Estudios\ Superiores\ de\ Monterrey\Documents\carroPID\build\sketch\control_motor.ino.cpp.o: \
+ C:\Users\pepe3\OneDrive\ -\ Instituto\ Tecnologico\ y\ de\ Estudios\ Superiores\ de\ Monterrey\Documents\carroPID\build\sketch\control_motor.ino.cpp \
  C:\Users\pepe3\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino/Arduino.h \
  C:\Users\pepe3\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino/binary.h \
  C:\Users\pepe3\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino/WCharacter.h \
