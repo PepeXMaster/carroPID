@@ -3,27 +3,6 @@ int INA = 12;
 int INB = 13;
 int velocidad = 100; // Velocidad del motor que va de 0 a 255
 
-//Función para ir hacia adelante
-void adelante(){
-   analogWrite(ENA,velocidad);
-   digitalWrite(INA,HIGH);
-   digitalWrite(INB,LOW); 
-}
-
-//Función para ir hacia atrás 
-void atras(){
-    analogWrite(ENA,velocidad);
-    digitalWrite(INA,LOW);
-    digitalWrite(INB,HIGH);
-}
-
-//Función para detener el carro totalmente
-void detener(){
-    analogWrite(ENA,0);
-    digitalWrite(INA,LOW);
-    digitalWrite(INB,LOW);
-}
-
 void setup() {
     pinMode(velocidad, OUTPUT);
     pinMode(INA, OUTPUT);
