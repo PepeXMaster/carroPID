@@ -24,6 +24,9 @@ void detener(){
     digitalWrite(INB,LOW);
 }
 
+void derecha(){
+}
+
 void setup() {
     pinMode(velocidad, OUTPUT);
     pinMode(INA, OUTPUT);
