@@ -1,9 +1,9 @@
 #include <Servo.h>
 
 int ENA = 11;
-int INA = 12;
-int INB = 13;
-int velocidad = 100; // Velocidad del motor que va de 0 a 255
+int INA = 13;
+int INB = 12;
+int velocidad = 255; // Velocidad del motor que va de 0 a 255
 int distancia;
 int trig =2;
 int eco=3;
@@ -21,6 +21,7 @@ void setup() {
     Serial.begin(9600);
     direccion.attach(3);
     delay(2000); // Que tarde 2 segundos en empezar el programa
+    recto();
 }
 
    void loop() {
@@ -32,6 +33,7 @@ void setup() {
     //    angulogiro(27);
     //    adelante();
     //   }
+    delay(1000);
     while(cont < 5){
       cont ++;
       adelante();
@@ -40,7 +42,9 @@ void setup() {
       delay(3000);
       recto();
     }
+    detener();
    }
+
 
 /*
 A este código le hace falta confirmar que los pines INA e INB estén bien asignados, de lo contrario

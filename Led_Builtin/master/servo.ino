@@ -1,12 +1,11 @@
 void derecha(){
-  direccion.write(0);
-  
+  direccion.write(95);
 }
 
 void izquierda(){
-  direccion.write(40);
+  direccion.write(130);
 }
 
 void recto(){
-  direccion.write(20);
+  direccion.write(110);
 }
