@@ -1,32 +1,40 @@
 #include <Arduino.h>
 #line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
+#include <Servo.h>
+
 int ENA = 11;
 int INA = 12;
 int INB = 13;
 int velocidad = 100; // Velocidad del motor que va de 0 a 255
+int distancia;
+int trig =2;
+int eco=3;
+int duracion;
+Servo direccion;
 
-#line 6 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
-void setup();
-#line 13 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
-void loop();
-#line 2 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
-void adelante();
-#line 9 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
-void atras();
-#line 16 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
-void detener();
-#line 6 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
+
 void setup() {
     pinMode(velocidad, OUTPUT);
     pinMode(INA, OUTPUT);
     pinMode(INB, OUTPUT);
+    pinMode(trig, OUTPUT);
+    pinMode(eco, INPUT);
+    Serial.begin(9600);
+    direccion.attach(3);
     delay(2000); // Que tarde 2 segundos en empezar el programa
 }
 
    void loop() {
-    //Avanzar por 3 segundos
-    adelante();
-    delay(3000);
+    //if(distancia <=20 && distancia >=0){
+    //    detener();
+    //    }
+    //    else {
+    //    delay(2000);
+    //    angulogiro(27);
+    //    adelante();
+    //   }
+
+    
 
     //Detenerse por 1 segundo
     detener();
@@ -39,7 +47,7 @@ void setup() {
     //Detenerse por 1 segundo
     detener();
     delay(1000);
-}
+   }
 
 /*
 A este código le hace falta confirmar que los pines INA e INB estén bien asignados, de lo contrario
@@ -72,4 +80,30 @@ void detener(){
     digitalWrite(INA,LOW);
     digitalWrite(INB,LOW);
 }
+
+#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\servo.ino"
+void derecha(){
+  direccion.write(0);
+  
+}
+
+void izquierda(){
+  direccion.write(40);
+}
+
+void recto(){
+  direccion.write(20);
+}
+
+#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\ultrasonico.ino"
+
+void ultrasonico() {
+digitalWrite(trig,HIGH);
+delay(1);
+digitalWrite(trig,LOW);
+duracion=pulseIn(eco,HIGH);
+distancia=duracion/58.2;
+Serial.println(distancia );
+delay(500);
+}    
 

@@ -1,18 +1,12 @@
 void derecha(){
-  angulogiro(42);
+  direccion.write(0);
+  
 }
 
 void izquierda(){
-  angulogiro(5);
+  direccion.write(40);
 }
 
 void recto(){
-  angulogiro(27);
+  direccion.write(20);
 }
-
-//Funcion servo
-void angulogiro(int angulo) {
-  if (angulo >= 0 && angulo <= 180) {
-    servodireccion.write(angulo);
-    delay(1000);
-  }
