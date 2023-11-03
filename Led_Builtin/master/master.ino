@@ -8,6 +8,7 @@ int distancia;
 int trig =2;
 int eco=3;
 int duracion;
+int cont;
 Servo direccion;
 
 
@@ -31,20 +32,14 @@ void setup() {
     //    angulogiro(27);
     //    adelante();
     //   }
-
-    
-
-    //Detenerse por 1 segundo
-    detener();
-    delay(1000);
-
-    //Retroceder por 3 segundos
-    atras();
-    delay(3000);
-
-    //Detenerse por 1 segundo
-    detener();
-    delay(1000);
+    while(cont < 5){
+      cont ++;
+      adelante();
+      delay(5000);
+      derecha();
+      delay(3000);
+      recto();
+    }
    }
 
 /*
