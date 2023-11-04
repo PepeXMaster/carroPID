@@ -1,21 +1,10 @@
 #include <Arduino.h>
-#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
+#line 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\Led_Builtin\\master\\master.ino"
 int ENA = 11;
 int INA = 12;
 int INB = 13;
 int velocidad = 100; // Velocidad del motor que va de 0 a 255
 
-#line 6 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
-void setup();
-#line 13 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
-void loop();
-#line 2 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
-void adelante();
-#line 9 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
-void atras();
-#line 16 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
-void detener();
-#line 6 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\master.ino"
 void setup() {
     pinMode(velocidad, OUTPUT);
     pinMode(INA, OUTPUT);
@@ -24,21 +13,27 @@ void setup() {
 }
 
    void loop() {
-    //Avanzar por 3 segundos
-    adelante();
-    delay(3000);
+    if(distancia <=20 && distancia >=0){
+        detener();
+        else 
+        delay(2000);
+        angulogiro(27);
+        adelante();
+
+
+
 
     //Detenerse por 1 segundo
-    detener();
-    delay(1000);
+    //detener();
+    //delay(1000);
 
     //Retroceder por 3 segundos
-    atras();
-    delay(3000);
+    //atras();
+    //delay(3000);
 
     //Detenerse por 1 segundo
-    detener();
-    delay(1000);
+    //detener();
+    //delay(1000);
 }
 
 /*
@@ -51,7 +46,7 @@ en caso de que no entonces es porque la dirección no está totalmente derecha, 
 barriendo (se cree que cuando el encoder se incluya al programa, no importará si los engranes se barren,
 favor de confirmar este dato).
 */
-#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
+#line 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\Led_Builtin\\master\\control_motor.ino"
 //Función para ir hacia adelante
 void adelante(){
    analogWrite(ENA,velocidad);
@@ -72,4 +67,48 @@ void detener(){
     digitalWrite(INA,LOW);
     digitalWrite(INB,LOW);
 }
+
+#line 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\Led_Builtin\\master\\servo.ino"
+#include <Servo.h>;
+void derecha(){
+  angulogiro(42);
+}
+
+void izquierda(){
+  angulogiro(5);
+}
+
+void recto(){
+  angulogiro(27);
+}
+
+//Funcion servo
+void angulogiro(int angulo) {
+  if (angulo >= 0 && angulo <= 180) {
+    servodireccion.write(angulo);
+    delay(1000);
+  }
+
+#line 1 "C:\\Users\\salve\\Documents\\GitHub\\carroPID\\Led_Builtin\\master\\ultrasonico.ino"
+int trig =2;
+int eco=3;
+int duracion;
+int distancia;
+
+void setup() {
+  pinMode(trig, OUTPUT);
+  pinMode(eco, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+digitalWrite(trig,HIGH);
+delay(1);
+digitalWrite(trig,LOW);
+duracion=pulseIn(eco,HIGH);
+distancia=duracion/58.2;
+Serial.println(distancia );
+delay(500);
+    }
+}    
 
