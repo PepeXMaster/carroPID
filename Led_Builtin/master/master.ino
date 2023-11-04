@@ -3,7 +3,7 @@
 int ENA = 11;
 int INA = 13;
 int INB = 12;
-int velocidad = 170; // Velocidad del motor que va de 0 a 255
+int velocidad = 255; // Velocidad del motor que va de 0 a 255
 int distancia;
 int trig =2;
 int eco=3;

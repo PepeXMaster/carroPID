@@ -11,6 +11,7 @@ int trig =2;
 int eco=3;
 int duracion;
 int cont;
+int servo = 3;
 Servo direccion;
 
 
@@ -20,8 +21,7 @@ void setup() {
     pinMode(INB, OUTPUT);
     pinMode(trig, OUTPUT);
     pinMode(eco, INPUT);
-    Serial.begin(9600);
-    direccion.attach(3);
+    //Serial.begin(9600);
     delay(2000); // Que tarde 2 segundos en empezar el programa
     recto();
 }
@@ -36,12 +36,12 @@ void setup() {
     //    adelante();
     //   }
     //delay(1000);
-    while(cont < 5){
+    while(cont < 4){
       cont ++;
       adelante();
       delay(5000);
       derecha();
-      delay(3000);
+      delay(5000);
       recto();
     }
     detener();
@@ -83,14 +83,17 @@ void detener(){
 
 #line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\servo.ino"
 void derecha(){
-  direccion.write(65);
+  direccion.attach(servo);
+  direccion.write(60);
 }
 
 void izquierda(){
+  direccion.attach(servo);
   direccion.write(85);
 }
 
 void recto(){
+  direccion.attach(servo);
   direccion.write(75);
 }
 
