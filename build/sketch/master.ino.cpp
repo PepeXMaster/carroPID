@@ -3,13 +3,14 @@
 #include <Servo.h>
 
 int ENA = 11;
-int INA = 12;
-int INB = 13;
-int velocidad = 100; // Velocidad del motor que va de 0 a 255
+int INA = 13;
+int INB = 12;
+int velocidad = 255; // Velocidad del motor que va de 0 a 255
 int distancia;
 int trig =2;
 int eco=3;
 int duracion;
+int cont;
 Servo direccion;
 
 
@@ -22,6 +23,7 @@ void setup() {
     Serial.begin(9600);
     direccion.attach(3);
     delay(2000); // Que tarde 2 segundos en empezar el programa
+    recto();
 }
 
    void loop() {
@@ -33,21 +35,18 @@ void setup() {
     //    angulogiro(27);
     //    adelante();
     //   }
-
-    
-
-    //Detenerse por 1 segundo
+    //delay(1000);
+    while(cont < 5){
+      cont ++;
+      adelante();
+      delay(5000);
+      derecha();
+      delay(3000);
+      recto();
+    }
     detener();
-    delay(1000);
-
-    //Retroceder por 3 segundos
-    atras();
-    delay(3000);
-
-    //Detenerse por 1 segundo
-    detener();
-    delay(1000);
    }
+
 
 /*
 A este código le hace falta confirmar que los pines INA e INB estén bien asignados, de lo contrario
@@ -59,6 +58,7 @@ en caso de que no entonces es porque la dirección no está totalmente derecha, 
 barriendo (se cree que cuando el encoder se incluya al programa, no importará si los engranes se barren,
 favor de confirmar este dato).
 */
+
 #line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\control_motor.ino"
 //Función para ir hacia adelante
 void adelante(){
@@ -83,27 +83,26 @@ void detener(){
 
 #line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\servo.ino"
 void derecha(){
-  direccion.write(0);
-  
+  direccion.write(65);
 }
 
 void izquierda(){
-  direccion.write(40);
+  direccion.write(85);
 }
 
 void recto(){
-  direccion.write(20);
+  direccion.write(75);
 }
 
 #line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\ultrasonico.ino"
 
 void ultrasonico() {
-digitalWrite(trig,HIGH);
-delay(1);
-digitalWrite(trig,LOW);
-duracion=pulseIn(eco,HIGH);
-distancia=duracion/58.2;
-Serial.println(distancia );
-delay(500);
+  digitalWrite(trig,HIGH);
+  delay(1);
+   digitalWrite(trig,LOW);
+  duracion=pulseIn(eco,HIGH);
+  distancia=duracion/58.2;
+  Serial.println(distancia );
+  delay(500);
 }    
 

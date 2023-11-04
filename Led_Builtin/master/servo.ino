@@ -1,11 +1,14 @@
 void derecha(){
-  direccion.write(95);
+  direccion.attach(servo);
+  direccion.write(60);
 }
 
 void izquierda(){
-  direccion.write(130);
+  direccion.attach(servo);
+  direccion.write(85);
 }
 
 void recto(){
-  direccion.write(110);
+  direccion.attach(servo);
+  direccion.write(75);
 }

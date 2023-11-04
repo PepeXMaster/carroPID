@@ -3,12 +3,13 @@
 int ENA = 11;
 int INA = 13;
 int INB = 12;
-int velocidad = 255; // Velocidad del motor que va de 0 a 255
+int velocidad = 170; // Velocidad del motor que va de 0 a 255
 int distancia;
 int trig =2;
 int eco=3;
 int duracion;
 int cont;
+int servo = 3;
 Servo direccion;
 
 
@@ -18,8 +19,7 @@ void setup() {
     pinMode(INB, OUTPUT);
     pinMode(trig, OUTPUT);
     pinMode(eco, INPUT);
-    Serial.begin(9600);
-    direccion.attach(3);
+    //Serial.begin(9600);
     delay(2000); // Que tarde 2 segundos en empezar el programa
     recto();
 }
@@ -33,13 +33,13 @@ void setup() {
     //    angulogiro(27);
     //    adelante();
     //   }
-    delay(1000);
-    while(cont < 5){
+    //delay(1000);
+    while(cont < 4){
       cont ++;
       adelante();
       delay(5000);
       derecha();
-      delay(3000);
+      delay(5000);
       recto();
     }
     detener();
