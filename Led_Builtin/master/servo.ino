@@ -1,19 +1,15 @@
 #include <Servo.h>;
 void derecha(){
-  angulogiro(42);
+  direccion.attach(servo);
+  direccion.write(60);
 }
 
 void izquierda(){
-  angulogiro(5);
+  direccion.attach(servo);
+  direccion.write(85);
 }
 
 void recto(){
-  angulogiro(27);
+  direccion.attach(servo);
+  direccion.write(75);
 }
-
-//Funcion servo
-void angulogiro(int angulo) {
-  if (angulo >= 0 && angulo <= 180) {
-    servodireccion.write(angulo);
-    delay(1000);
-  }

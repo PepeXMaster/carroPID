@@ -1,38 +1,50 @@
+#include <Servo.h>
+
 int ENA = 11;
-int INA = 12;
-int INB = 13;
-int velocidad = 100; // Velocidad del motor que va de 0 a 255
+int INA = 13;
+int INB = 12;
+int velocidad = 170; // Velocidad del motor que va de 0 a 255
+int distancia;
+int trig =2;
+int eco=3;
+int duracion;
+int cont;
+int servo = 3;
+Servo direccion;
+
 
 void setup() {
     pinMode(velocidad, OUTPUT);
     pinMode(INA, OUTPUT);
     pinMode(INB, OUTPUT);
+    pinMode(trig, OUTPUT);
+    pinMode(eco, INPUT);
+    //Serial.begin(9600);
     delay(2000); // Que tarde 2 segundos en empezar el programa
+    recto();
 }
 
    void loop() {
-    if(distancia <=20 && distancia >=0){
-        detener();
-        else 
-        delay(2000);
-        angulogiro(27);
-        adelante();
-
-
-
-
-    //Detenerse por 1 segundo
-    //detener();
+    //if(distancia <=20 && distancia >=0){
+    //    detener();
+    //    }
+    //    else {
+    //    delay(2000);
+    //    angulogiro(27);
+    //    adelante();
+    //   }
     //delay(1000);
+    while(cont < 4){
+      cont ++;
+      adelante();
+      delay(5000);
+      derecha();
+      delay(5000);
+      recto();
+    }
+    detener();
+   }
 
-    //Retroceder por 3 segundos
-    //atras();
-    //delay(3000);
-
-    //Detenerse por 1 segundo
-    //detener();
-    //delay(1000);
-}
 
 /*
 A este código le hace falta confirmar que los pines INA e INB estén bien asignados, de lo contrario
