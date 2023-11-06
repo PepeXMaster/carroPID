@@ -20,8 +20,8 @@ void setup() {
     pinMode(trig, OUTPUT);
     pinMode(eco, INPUT);
     //Serial.begin(9600);
-    delay(2000); // Que tarde 2 segundos en empezar el programa
     recto();
+    delay(2000); // Que tarde 2 segundos en empezar el programa
 }
 
    void loop() {

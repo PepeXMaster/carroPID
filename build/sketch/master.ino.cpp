@@ -22,8 +22,8 @@ void setup() {
     pinMode(trig, OUTPUT);
     pinMode(eco, INPUT);
     //Serial.begin(9600);
-    delay(2000); // Que tarde 2 segundos en empezar el programa
     recto();
+    delay(2000); // Que tarde 2 segundos en empezar el programa
 }
 
    void loop() {
@@ -81,6 +81,8 @@ void detener(){
     digitalWrite(INB,LOW);
 }
 
+#line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\magentometro.ino"
+
 #line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\servo.ino"
 void derecha(){
   direccion.attach(servo);
@@ -96,9 +98,7 @@ void recto(){
   direccion.attach(servo);
   direccion.write(75);
 }
-
 #line 1 "C:\\Users\\pepe3\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\Documents\\carroPID\\Led_Builtin\\master\\ultrasonico.ino"
-
 void ultrasonico() {
   digitalWrite(trig,HIGH);
   delay(1);

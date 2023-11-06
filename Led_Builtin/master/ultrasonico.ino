@@ -1,4 +1,3 @@
-
 void ultrasonico() {
   digitalWrite(trig,HIGH);
   delay(1);
